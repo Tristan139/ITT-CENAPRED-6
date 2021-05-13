@@ -23,8 +23,8 @@ end
 
 
 train = CSV.read("/Users/bernardoflores/Documents/ITT-CENAPRED-6/code/train.csv", DataFrame)
-#Drops the extra column
-train = SharedArray(Matrix(train[:,2:6]))
+#To do parallel processing
+train = SharedArray(Matrix(train]))
 
 #Only the upper triangular part will be filled
 distances = zeros(BigFloat, 6000, 6000)
